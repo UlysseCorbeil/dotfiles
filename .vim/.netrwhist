@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/ulyssecorbeil/.vim/pack'
+let g:netrw_dirhist_2='/Users/ulyssecorbeil/.vim'
+let g:netrw_dirhist_3='/Users/ulyssecorbeil/.vim/colors'
+let g:netrw_dirhist_4='/Users/ulyssecorbeil/.vim/colors/base16'
+let g:netrw_dirhist_5='/Users/ulyssecorbeil/.vim/colors'
+let g:netrw_dirhist_6='/Users/ulyssecorbeil/.vim'
