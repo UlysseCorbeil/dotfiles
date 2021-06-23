@@ -1,0 +1,12 @@
+configuration {
+    font: "Product Sans 11";
+    icon-theme: "Yaru";
+    show-icons: true;
+    cycle:              true;
+    hide-scrollbar:     true;
+    disable-history:    true;
+    theme: "~/.config/rofi/themes/mytheme.rasi";
+    modi:               "drun";
+    display-drun:       "Search";
+}
+
