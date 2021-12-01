@@ -2,7 +2,7 @@
   
   ## i3
     sudo apt update
-    sudo apt install
+    sudo apt install i3
   
   ## fonts
     sudo apt update
