@@ -1,0 +1,172 @@
+[colors]
+background = #2E3440
+background-alt = #5E81AC
+foreground = #ECEFF4
+foreground-alt = #5E81AC
+primary = #D8DEE9
+secondary = #BF616A
+alert = #BF616A
+
+[bar/main]
+monitor = ${env:MONITOR:}
+width = 100%
+bottom = true
+height = 30
+;offset-x = 1%
+;offset-y = 1%
+; radius = 6.0
+fixed-center = false
+
+background = #1d1f2110
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+; border-size = 4
+; border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = FiraCode Nerd Font:size=10;1
+font-1 = FiraCode Nerd Font Mono:pixelsize=10;1
+
+modules-left = i3
+; modules-center = mpd
+modules-right = wlan battery pulseaudio date
+
+tray-position = none
+
+wm-restack = i3
+
+locale = fr_CA.utf8
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/eDP1]
+inherit = bar/main
+monitor = eDP1
+
+[bar/HDMI2]
+inherit = bar/main
+monitor = HDMI2
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+
+# label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+[module/wlan]
+type = internal/network
+interface = wlp0s20f3
+interval = 3.0
+
+format-connected = %{A1:networkmanager_dmenu:}直  <label-connected>%{A}
+label-connected = %essid%
+
+format-disconnected = %{A1:networkmanager_dmenu:}睊%{A}
+
+[module/date]
+type = internal/date
+interval = 5
+time = %H:%M
+date = %A %d %B %Y
+label =   %time%%{A} %{A}%{A3:gsimplecal & disown:}%date%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+use-ui-max = true
+interval = 5
+format-volume = <ramp-volume> <label-volume>
+label-muted = ﱝ
+label-muted-foreground = #666
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+
+format-charging =  <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full =  <label-full>
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-0-foreground = #BF616A
+ramp-capacity-1-foreground = #BF616A
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = #BF616A
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+; margin-top = 5
+; margin-bottom = 5
+
+; vim:ft=dosini

@@ -11,6 +11,7 @@ general {
 order += "volume master"
 order += "tztime day"
 order += "battery 1"
+order += "wireless wlan0"
 order += "tztime hour"
 
 tztime day {
@@ -41,5 +42,3 @@ battery 1 {
     path = "/sys/class/power_supply/BAT0/uevent"
     low_threshold = 10
 }
-
-
