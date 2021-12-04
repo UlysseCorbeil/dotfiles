@@ -25,9 +25,8 @@
     
     The default installation prefix is: /usr/local/ use ./configure --prefix={prefix} to install into another location. 
 
-  ## Copy all files in ~/.config
-    done
-
+  Copy all files in ~/.config
+  done !
   ## preview
   ![image info](./setup.png)
 
