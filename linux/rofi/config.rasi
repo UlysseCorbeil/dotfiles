@@ -1,21 +1,21 @@
 /*configuration {
-    font: "Product Sans 11";
+    font: "Fira Code Nerd Font Medium 11";
     icon-theme: "Yaru";
     show-icons: true;
     cycle:              true;
     hide-scrollbar:     true;
     disable-history:    true;
-    theme: "~/.config/rofi/themes/mytheme.rasi";
     modi:               "drun";
     display-drun:       "Search";
 }*/
 
 configuration {
-  display-run: " ";
-  display-drun: " ";
-  display-window: " ";
+  display-run: " ";
+  display-drun: " ";
+  display-window: " ";
   drun-display-format: "{icon} {name}";
-  font: "JetBrainsMono Nerd Font Medium 10";
+  font: "Fira Code Nerd Font Medium 10";
+  theme: "~/.config/rofi/themes/mytheme.rasi";
   modi: "window,run,drun";
   show-icons: true;
 }
@@ -41,7 +41,7 @@ configuration {
   aurora-4: #A3BE8C;
   aurora-5: #B48EAD;
 
-  background-color: @polar-1;
+  background-color: @snow-1;
   
   border: 0;
   margin: 0;
@@ -52,17 +52,17 @@ configuration {
 element {
   padding: 12;
   orientation: vertical;
-  text-color: @frost-3;
+  text-color: @polar-1;
 }
 
 element selected {
-  text-color: @aurora-3;
+  text-color: @frost-4;
 }
 
 entry {
-  background-color: @polar-2;
+  background-color: @snow-1;
   padding: 12 0 12 3;
-  text-color: @frost-1;
+  text-color: @polar-1;
 }
 
 inputbar {
@@ -76,10 +76,11 @@ listview {
 
 mainbox {
   children: [inputbar, listview];
+
 }
 
 prompt {
-  background-color: @polar-2;
+  background-color: @snow-1;
   enabled: true;
   font: "FontAwesome 12";
   padding: 12 0 0 12;
@@ -88,4 +89,5 @@ prompt {
 
 window {
   transparency: "real";
+  border-radius: 15px;
 }

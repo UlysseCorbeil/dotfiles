@@ -1,28 +1,31 @@
 
 *{
-  background-color: #4C566A;
-  border-color: #434C5E;
-  text-color: #D8DEE9;
+  // background-color: #2E3440;
+  // border-color: #434C5E;
+  text-color: #2E3440;
   spacing: 0;
-  width: 50%;
-  height: 50%;
+  
+  width: 30%;
+  height: 30%;
 }
 
 inputbar {
   border: 0 0 1px 0;
+  border-color: @frost-3;
   children: [prompt,entry];
 }
 
 prompt {
-  padding: 16px;
-  border: 0 1px 0 0;
+  font: "Fira Code Nerd Font Medium 13";
+  text-color: @polar-1;
+  padding: 1% 0px 0px 1%;
+  // border: 0 1px 0 0;
 }
 
 textbox {
-  background-color: #2E3440;
+  // background-color: #2E3440;
   border: 0 0 1px 0;
   border-color: #2E3440;
-  padding: 8px 16px;
 }
 
 entry {
@@ -31,17 +34,13 @@ entry {
 
 listview {
   cycle: false;
-  margin: 0 0 -1px 0;
+  // margin: 0 0 -1px 0;
+  padding: 16px;
   scrollbar: false;
 }
 
 element {
-  border: 0 0 1px 0;
-  padding: 16px;
-}
-
-element selected {
-  background-color: #5E81AC;
+  padding: 2% 0 0 0.3%;
 }
 
 prompt {

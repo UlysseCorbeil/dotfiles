@@ -7,14 +7,14 @@ floating_modifier $super
 
 exec_always --no-startup-id "compton -b"
 
-exec_always --no-startup-id feh --bg-scale ~/Images/Wallpapers/wallpaper.jpeg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 exec_always --no-startup-id xsettingsd &
 
-exec --no-startup-id setxkbmap ca,multix
+# exec --no-startup-id setxkbmap ca,multix
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-bindsym $super+Return exec i3-sensible-terminal
+bindsym $super+Return exec st
 
 bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Fira Code Nerd Font:size=10'"
 bindsym $super+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Fira Code Nerd Font 10'
@@ -25,8 +25,8 @@ bindsym $super+Shift+w exec firefox
 bindsym $super+Shift+f exec thunar;workspace 3;focus
 bindsym $super+Shift+g exec geany
 
-bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
-bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 2%+
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 2%-
 bindsym XF86AudioMute exec "amixer -D pulse sset Master,0 toggle"
 
 # music control
@@ -36,8 +36,8 @@ bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioStop exec mpc stop
 
 # Brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
 
 bindsym $super+c kill
 bindsym $alt+F4 kill
@@ -158,5 +158,4 @@ for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo
 # colour of border, background, text, indicator, and child_border
 default_border none
 default_floating_border none
-
 

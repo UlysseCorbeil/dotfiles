@@ -120,7 +120,7 @@
     #        <u>underline</u>
     #
     #        For a complete reference see
-    #        <https://developer.gnome.org/pango/stable/pango-Markup.html>.
+    #        <https://developer.gnomeorg/pango/stable/pango-Markup.html>.
     #
     # strip: This setting is provided for compatibility with some broken
     #        clients that send markup even though it's not enabled on the
@@ -468,4 +468,4 @@
     appname = "some_volume_notifiers"
     set_stack_tag = "volume"
 
-# vim: ft=cfg
+# vim: ft=cfg.
