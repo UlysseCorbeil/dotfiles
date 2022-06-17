@@ -3,6 +3,9 @@
   ## i3
     sudo apt update
     sudo apt install i3
+
+  ## git-hooks integration
+    execute script from hooks/pre-commits
   
   ## fonts
     sudo apt update
