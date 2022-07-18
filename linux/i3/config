@@ -9,6 +9,7 @@ exec_always --no-startup-id "compton -b"
 
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 exec_always --no-startup-id xsettingsd &
+exec_always --no-startup-id i3-battery-popup
 
 # exec --no-startup-id setxkbmap ca,multix
 
