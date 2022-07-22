@@ -5,20 +5,21 @@ font pango: Fira Code Nerd Font 11
 
 floating_modifier $super
 
-exec_always --no-startup-id "compton -b"
+exec killall picom &&
+exec killall cbatticon &&
+exec_always --no-startup-id "picom -b --experimental-backends --backend glx"
 
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 exec_always --no-startup-id xsettingsd &
-exec_always --no-startup-id i3-battery-popup
-
-# exec --no-startup-id setxkbmap ca,multix
+# exec_always --no-startup-id cbatticon -u 60
+exec --no-startup-id setxkbmap ca,multix
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 bindsym $super+Return exec st
 
 bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Fira Code Nerd Font:size=10'"
-bindsym $super+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Fira Code Nerd Font 10'
+bindsym $super+d exec rofi -matching fuzzy -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Fira Code Nerd Font 10'
 
 bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
 bindsym $super+l exec /usr/local/bin/lock_and_blur.sh
@@ -125,7 +126,7 @@ bindsym $super+r mode "resize"
 
 
 # panel
-#bar {
+# bar {
 #        bindsym button4 nop
 #        bindsym button5 nop
 #        tray_output none
@@ -134,7 +135,7 @@ bindsym $super+r mode "resize"
 #                background #2E3440
 #                statusline #2E3440
 #                separator #4C566A
-#
+
 #                # colour of border, background, and text
 #                focused_workspace       #2E3440 #5E81AC #ECEFF4
 #                active_workspace        #2E3440 #2E3440 #ECEFF4
@@ -142,7 +143,7 @@ bindsym $super+r mode "resize"
 #                urgent_workspacei       #2E3440 #BF616A #2E3440
 #        }
 #        status_command i3status
-#}
+# }
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 0

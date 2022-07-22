@@ -51,8 +51,10 @@ monitor = ${env:MONITOR:}
 width = 100%
 bottom = true
 height = 9
-offset-x = 0.64%
+offset-x = 0.75%
 offset-y = 0.2%
+# offset-x = 0.64%
+# offset-y = 0.2%
 ; radius = 6.0
 fixed-center = false
 
