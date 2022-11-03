@@ -109,7 +109,7 @@ bindsym $super+Shift+0 move container to workspace $workspace10; workspace $work
 
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $super+Shift+r restart
+bindsym $super+Shift+r restart && exec xrandr -s 0
 
 # exit i3
 bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"

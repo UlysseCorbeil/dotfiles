@@ -39,8 +39,8 @@ font-0 = FiraCode Nerd Font:size=10;1
 font-1 = FiraCode Nerd Font Mono:pixelsize=10;1
 
 modules-left = i3
-; modules-center = mpd
-modules-right = wlan backlight battery pulseaudio date
+; modules-center = uptime
+modules-right = wlan uptime backlight battery pulseaudio date
 
 tray-position = none
 
@@ -179,7 +179,7 @@ type = internal/date
 interval = 5
 time = %H:%M
 date = %A %d %B %Y
-label =   %time%%{A} %{A}%{A3:gsimplecal & disown:}%date%
+label =  %time%%{A} %{A}%{A3:gsimplecal & disown:}%date%
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -243,6 +243,18 @@ format-prefix = " "
 label = %output%
 label-foreground = ${colors.fg}
 format-padding = 1
+
+[module/uptime]
+type = custom/script
+exec = uptime | awk -F'( |,|:)+' '{d=h=m=0; if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"jour,",h+0,"heures,",m+0,"minutes"}'
+
+interval = 100
+
+;HOW TO SET IT MINIMAL 10 CHARACTERS - HIDDEN BEHIND SYSTEM ICONS
+;label = %output%
+label = %output:10%
+
+format-prefix = "  "
 
 [settings]
 screenchange-reload = true

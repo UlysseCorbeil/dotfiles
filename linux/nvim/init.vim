@@ -9,7 +9,7 @@ Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' } " Js integration
 
 Plug 'chriskempson/base16-vim'                       " Theme
 
-Plug 'sheerun/vim-polyglot'                          " Autocomplete for different languages
+Plug 'sheerun/vim-polyglot' ;                         " Autocomplete for different languages
 
 Plug 'arcticicestudio/nord-vim'                      " Nord
 

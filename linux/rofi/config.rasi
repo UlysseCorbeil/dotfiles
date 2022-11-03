@@ -15,10 +15,11 @@ configuration {
   display-window: " ";
   drun-display-format: "{icon} {name}";
   font: "Fira Code Nerd Font Medium 10";
-  theme: "~/.config/rofi/themes/mytheme.rasi";
   modi: "window,run,drun";
   show-icons: true;
 }
+
+@theme "~/.config/rofi/themes/mytheme.rasi"
 
 * {
   polar-1: #2E3440;
@@ -42,7 +43,7 @@ configuration {
   aurora-5: #B48EAD;
 
   background-color: @snow-1;
-  
+
   border: 0;
   margin: 0;
   padding: 0;
@@ -52,17 +53,24 @@ configuration {
 element {
   padding: 12;
   orientation: vertical;
-  text-color: @polar-1;
+  text-color: @aurora-4;
 }
 
 element selected {
-  text-color: @frost-4;
+  text-color: @aurora-2;
+  // padding: 12;
+}
+
+textbox-icon {
+    orientation: vertical;
+  padding: 5;
+
 }
 
 entry {
-  background-color: @snow-1;
+  // background-color: @snow-2;
   padding: 12 0 12 3;
-  text-color: @polar-1;
+  text-color: @polar-2;
 }
 
 inputbar {
@@ -80,14 +88,15 @@ mainbox {
 }
 
 prompt {
-  background-color: @snow-1;
+  // background-color: @snow-2;
   enabled: true;
   font: "FontAwesome 12";
-  padding: 12 0 0 12;
-  text-color: @frost-1;
+  // padding: 12 0 0 12;
+  text-color: @frost-2;
 }
 
 window {
   transparency: "real";
   border-radius: 15px;
 }
+
