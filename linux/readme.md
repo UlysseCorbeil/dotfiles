@@ -1,7 +1,4 @@
-# Installation steps :
-  
   ## i3
-    sudo apt update
     sudo apt install i3
 
   ## git-hooks integration
