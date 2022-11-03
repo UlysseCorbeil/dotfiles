@@ -48,5 +48,5 @@ font:
 # window size and padding
 window:
   padding:
-   x: 0
-   y: 0
+   x: 10
+   y: 10

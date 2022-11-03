@@ -43,7 +43,6 @@ configuration {
   aurora-5: #B48EAD;
 
   background-color: @snow-1;
-
   border: 0;
   margin: 0;
   padding: 0;
@@ -52,6 +51,7 @@ configuration {
 
 element {
   padding: 12;
+  highlight: none;
   orientation: vertical;
   text-color: @aurora-4;
 }
@@ -62,7 +62,7 @@ element selected {
 }
 
 textbox-icon {
-    orientation: vertical;
+  orientation: vertical;
   padding: 5;
 
 }

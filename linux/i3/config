@@ -16,10 +16,10 @@ exec --no-startup-id setxkbmap ca,multix
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-bindsym $super+Return exec st
+bindsym $super+Return exec alacritty
 
 bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Fira Code Nerd Font:size=10'"
-bindsym $super+d exec rofi -matching fuzzy -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Fira Code Nerd Font 10'
+bindsym $super+d exec rofi -matching fuzzy -lines 12 -padding 18 -width 60 -location 0 -show drun -matching regex -no-tokenize -drun-match-fields 'name' -drun-display-format '{name}' -sidebar-mode -columns 3 -font 'Fira Code Nerd Font 10'
 
 bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
 bindsym $super+l exec /usr/local/bin/lock_and_blur.sh
