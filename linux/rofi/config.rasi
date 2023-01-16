@@ -1,13 +1,4 @@
-/*configuration {
-    font: "Fira Code Nerd Font Medium 11";
-    icon-theme: "Yaru";
-    show-icons: true;
-    cycle:              true;
-    hide-scrollbar:     true;
-    disable-history:    true;
-    modi:               "drun";
-    display-drun:       "Search";
-}*/
+// @theme "~/.config/rofi/themes/mytheme.rasi"
 
 configuration {
   display-run: " ";
@@ -19,84 +10,97 @@ configuration {
   show-icons: true;
 }
 
-@theme "~/.config/rofi/themes/mytheme.rasi"
+@theme "~/.config/rofi/themes/rounded-common.rasi"
+
+configuration {
+  display-run: " ";
+  display-drun: " ";
+  display-window: " ";
+  drun-display-format: "{icon} {name}";
+  font: "Fira Code Nerd Font Medium 10";
+  modi: "window,run,drun";
+  show-icons: true;
+}
 
 * {
-  polar-1: #2E3440;
-  polar-2: #3B4252;
-  polar-3: #434C5E;
-  polar-4: #4C566A;
-
-  snow-1: #D8DEE9;
-  snow-2: #E5E9F0;
-  snow-3: #ECEFF4;
-
-  frost-1: #8FBCBB;
-  frost-2: #88C0D0;
-  frost-3: #81A1C1;
-  frost-4: #5E81AC;
-
-  aurora-1: #BF616A;
-  aurora-2: #D08770;
-  aurora-3: #EBCB8B;
-  aurora-4: #A3BE8C;
-  aurora-5: #B48EAD;
-
-  background-color: @snow-1;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
+    fg0:    #2E3440F2;
+    fg1:    #3B4252;
+    fg2:    #4C566A80;
+    fg3:    #88C0D0F2;
+    bg0:    #D8DEE9;
+    bg02:    #D8DEE975;
+    bg1:    #ECEFF4;
+    bg2:    #D8DEE9;
+    bg3:    #4C566A;
 }
 
-element {
-  padding: 12;
-  highlight: none;
-  orientation: vertical;
-  text-color: @aurora-4;
-}
+@import "rounded-common.rasi"
 
 element selected {
-  text-color: @aurora-2;
-  // padding: 12;
+    text-color: @bg1;
 }
 
-textbox-icon {
-  orientation: vertical;
-  padding: 5;
 
-}
+// * {
+//   polar-1: #2E3440;
+//   polar-2: #3B4252;
+//   polar-3: #434C5E;
+//   polar-4: #4C566A;
 
-entry {
-  // background-color: @snow-2;
-  padding: 12 0 12 3;
-  text-color: @polar-2;
-}
+//   snow-1: #D8DEE9;
+//   snow-2: #E5E9F0;
+//   snow-3: #ECEFF4;
 
-inputbar {
-  children: [prompt, entry];
-}
+//   frost-1: #8FBCBB;
+//   frost-2: #88C0D0;
+//   frost-3: #81A1C1;
+//   frost-4: #5E81AC;
 
-listview {
-  columns: 1;
-  lines: 8;
-}
+//   aurora-1: #BF616A;
+//   aurora-2: #D08770;
+//   aurora-3: #EBCB8B;
+//   aurora-4: #A3BE8C;
+//   aurora-5: #B48EAD;
 
-mainbox {
-  children: [inputbar, listview];
+//   background-color: @snow-2;
+//   border: 0;
+//   margin: 0;
+//   padding: 0;
+//   spacing: 0;
+// }
 
-}
+// textbox-icon {
+//   orientation: vertical;
+//   padding: 5;
+// }
 
-prompt {
-  // background-color: @snow-2;
-  enabled: true;
-  font: "FontAwesome 12";
-  // padding: 12 0 0 12;
-  text-color: @frost-2;
-}
+// entry {
+//   background-color: @snow-2;
+//   padding: 12 0 12 3;
+//   text-color: @polar-2;
+// }
 
-window {
-  transparency: "real";
-  border-radius: 15px;
-}
+// inputbar {
+//   children: [prompt, entry];
+// }
 
+// listview {
+//   columns: 1;
+//   lines: 8;
+// }
+
+// mainbox {
+//   children: [inputbar, listview];
+// }
+
+// prompt {
+//   background-color: @snow-2;
+//   enabled: true;
+//   padding: 12 0 0 12;
+//   text-color: @frost-3;
+// }
+
+// window {
+//   transparency: "real";
+//   border-radius: 15px;
+// }
