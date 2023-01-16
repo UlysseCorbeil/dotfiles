@@ -1,19 +1,19 @@
   ## i3
-    sudo apt install i3
+    sudo dnf install i3
 
   ## git-hooks integration
     execute script from hooks/pre-commits
   
   ## fonts
-    sudo apt update
-    sudo apt install fonts-firacode
+    sudo dnf update
+    sudo dnf install fonts-firacode
     font_url='https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip'; font_name=${font_url##*/}; wget ${font_url} && unzip ${font_name} -d ~/.fonts && fc-cache -fv;
 
   ## polybar
-    sudo apt install polybar
+    sudo dnf install polybar
 
   ## rofi
-    sudo apt install rofi
+    sudo dnf install rofi
 
     or build from release
       
