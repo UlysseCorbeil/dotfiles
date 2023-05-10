@@ -42,7 +42,7 @@ font-1 = FiraCode Nerd Font Mono:pixelsize=10;1
 font-2 = FiraCode Nerd Font Mono:pixelsize=12;2
 modules-left = i3
 ; modules-center = uptime
-modules-right = round-left wlan round-right space round-left uptime round-right space round-left weather round-right space round-left backlight round-right space round-left battery round-right space round-left pulseaudio round-right space round-left date round-right
+modules-right = round-left wlan round-right space round-left uptime round-right space round-left weather round-right space round-left backlight round-right space round-left battery round-right space round-left pulseaudio  round-right space round-left bluetooth round-right space round-left date round-right
 
 tray-position = none
 
@@ -181,6 +181,14 @@ type = custom/text
 content = %{T3}%{T-}
 content-foreground = ${colors.rounded}
 
+[module/control-center]
+type = custom/text
+content = 
+
+format-background = ${colors.rounded}
+
+click-left = ~/eww/target/release && ./eww open example
+
 [module/wlan]
 type = internal/network
 interface = wlp0s20f3
@@ -192,6 +200,13 @@ format-connected-background = ${colors.rounded}
 label-connected = %essid%
 format-disconnected = %{A1:networkmanager_dmenu:}睊%{A}
 
+[module/bluetooth]
+type = custom/script
+exec = ~/.config/polybar/bluetooth.sh
+interval = 2
+click-left = exec blueberry
+click-right = exec ~/.config/polybar/toggle_bluetooth.sh
+format-background = ${colors.rounded}
 
 [module/date]
 type = internal/date

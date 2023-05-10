@@ -106,13 +106,21 @@ alias c="clear"
 
 alias gs="git status"
 alias gm="git commit -m"
-alias ga="git add ."
+alias ga="git add -A"
 alias disk="df -BG"
+alias sm="bpytop"
+alias update="echo '\n==== System update ==== \n' && sudo dnf update && sudo dnf upgrade --refresh && echo '\n==== Snap update ==== \n' && sudo snap refresh && echo '\n==== Flatpak update ==== \n' && sudo flatpak update"
+
 
 alias test="vendor/bin/phpunit --bootstrap tests/bootstrap.php tests"
-
+alias code="codium"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+PATH="/usr/local/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH=$PATH:/home/ulysse/.spicetify
+
+export HWLOC_HIDE_ERRORS=2
