@@ -10,7 +10,7 @@ exec killall cbatticon &&
 exec_always --no-startup-id "picom -b &"
 #exec_always --no-startup-id "picom -b --experimental-backends --backend glx"
 
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper2.jpg
 exec_always --no-startup-id xsettingsd &
 # exec_always --no-startup-id cbatticon -u 60
 exec_always --no-startup-id setxkbmap ca multix
@@ -23,14 +23,20 @@ bindsym $super+Return exec alacritty
 #bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Monospace:size=10'"
 bindsym $super+d exec rofi -matching fuzzy -lines 12 -padding 18 -width 60 -location 0 -show drun -matching regex -no-tokenize -drun-match-fields 'name' -drun-display-format '{name}' -sidebar-mode -columns 3 -font 'Fira Code Nerd Font Mono 10'
 
-exec --no-startup-id ~/.config/i3-battery-popup/i3-battery-popup -n -D -L 15 -l 5
+bindsym $super+shift+d exec rofi -matching fuzzy -lines 12 -padding 18 -width 60 -location 0 -show calc -matching regex -no-tokenize -drun-match-fields 'name' -drun-display-format '{name}' -sidebar-mode -columns 3 -font 'Fira Code Nerd Font Mono 10'
+
+exec_always --no-startup-id ~/.config/i3-battery-popup/i3-battery-popup -n -D -L 15 -l 5
 
 bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
-bindsym $super+l exec /usr/local/bin/lock_and_blur.sh
+bindsym $super+l exec "i3lock -c 000000"
 
-bindsym XF86AudioRaiseVolume exec ~/.config/pamixer/build/pamixer --increase 5
-bindsym XF86AudioLowerVolume exec ~/.config/pamixer/build/pamixer --decrease 5
-bindsym XF86AudioMute exec ~/.config/pamixer/build/pamixer --toggle-mute
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/volume_control.sh up
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/volume_control.sh down
+bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/volume_control.sh mute
+
+# bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
+# bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+# bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
 # music control
 bindsym XF86AudioNext exec mpc next
@@ -113,7 +119,7 @@ bindsym $super+Shift+0 move container to workspace $workspace10; workspace $work
 bindsym $super+Shift+r restart && exec xrandr -s 0
 
 # exit i3
-bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
+# bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -140,4 +146,3 @@ for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo
 # colour of border, background, text, indicator, and child_border
 default_border none
 default_floating_border none
-

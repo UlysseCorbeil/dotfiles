@@ -1,52 +1,76 @@
+# colors:
+#   primary:
+#     background: '0x2b241f'  # softened dark brown (brighter than #1e1b18)
+#     foreground: '0xece0d1'  # warm light ivory
+
+#   normal:
+#     black:   '0x2b241f'  # same as background
+#     red:     '0xa64838'  # clay rust red
+#     green:   '0x806b4d'  # muted bronze olive
+#     yellow:  '0xd08c60'  # copper rust
+#     blue:    '0x947c6a'  # dusty taupe
+#     magenta: '0xc25c2c'  # rich burnt orange
+#     cyan:    '0xaf836e'  # warm desaturated clay
+#     white:   '0xece0d1'  # soft ivory
+
+#   bright:
+#     black:   '0x3a2f29'  # elevated background
+#     red:     '0xd1664a'  # lighter rust orange
+#     green:   '0x9a7b5c'  # bronze highlight
+#     yellow:  '0xf0a878'  # light copper
+#     blue:    '0xab9580'  # lighter taupe
+#     magenta: '0xe17645'  # bright orange highlight
+#     cyan:    '0xcfa895'  # pinkish clay
+#     white:   '0xfaf4ee'  # warm white
 
 colors:
-  primary:
-    background: '#2E3440'
-    foreground: '#D8DEE9'
+    primary:
+        background: "#2E3440"
+        foreground: "#D8DEE9"
 
-  normal:
-    black:   '#3B4252'
-    red:     '#BF616A'
-    green:   '#A3BE8C'
-    yellow:  '#EBCB8B'
-    blue:    '#81A1C1'
-    magenta: '#B48EAD'
-    cyan:    '#88C0D0'
-    white:   '#E5E9F0'
+    normal:
+        black: "#3B4252"
+        red: "#BF616A"
+        green: "#A3BE8C"
+        yellow: "#EBCB8B"
+        blue: "#81A1C1"
+        magenta: "#B48EAD"
+        cyan: "#88C0D0"
+        white: "#E5E9F0"
 
-  bright:
-    black:   '#4C566A'
-    red:     '#BF616A'
-    green:   '#A3BE8C'
-    yellow:  '#EBCB8B'
-    blue:    '#81A1C1'
-    magenta: '#B48EAD'
-    cyan:    '#8FBCBB'
-    white:   '#ECEFF4'
+    bright:
+        black: "#4C566A"
+        red: "#BF616A"
+        green: "#A3BE8C"
+        yellow: "#EBCB8B"
+        blue: "#81A1C1"
+        magenta: "#B48EAD"
+        cyan: "#8FBCBB"
+        white: "#ECEFF4"
 
 # fonts
 font:
-  normal:
-    family: Fira Code
-    style: Regular
+    normal:
+        family: Fira Code
+        style: Regular
 
-  bold:
-    family: Fira Code
-    style: Bold
+    bold:
+        family: Fira Code
+        style: Bold
 
-  italic:
-    family: Fira Code
-    style: Italic
+    italic:
+        family: Fira Code
+        style: Italic
 
-  bold_italic:
-    family: Fira Code
-    style: Bold Italic
+    bold_italic:
+        family: Fira Code
+        style: Bold Italic
 
-  size: 10
+    size: 10
 
 # window size and padding
 window:
-  opacity: 0.87
-  padding:
-   x: 10
-   y: 10
+    opacity: 0.87
+    padding:
+        x: 10
+        y: 10

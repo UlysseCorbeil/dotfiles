@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=9999999999
+HISTFILESIZE=9999999999
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -123,3 +123,20 @@ exec zsh
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ulysse/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ulysse/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ulysse/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ulysse/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+[[ -s "/home/ulysse/.gvm/scripts/gvm" ]] && source "/home/ulysse/.gvm/scripts/gvm"

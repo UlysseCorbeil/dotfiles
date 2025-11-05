@@ -17,8 +17,6 @@ Plug 'itchyny/lightline.vim'                         " Status line
 
 Plug 'scrooloose/nerdtree'                           " Folder nav
 
-Plug 'Valloric/YouCompleteMe'                        " Auto-complete
-
 Plug 'Konfekt/vim-alias'                             " Alias plugin
 
 Plug 'jiangmiao/auto-pairs'                          " Auto close brackets
@@ -39,7 +37,6 @@ let g:javascript_plugin_flow = 1
 colorscheme nord
 let g:lightline = { 'colorscheme': 'nord' }
 
-term=xterm-256color
 set t_Co=256
 set background=dark
 
@@ -55,7 +52,6 @@ set exrc
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set lines=60 columns=200
 set visualbell
 set noexpandtab
 set nocompatible

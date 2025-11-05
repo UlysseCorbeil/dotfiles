@@ -6,7 +6,7 @@ while pgrep -u $UID -x polyba >/dev/null; do sleep 1; done
 
 if type "xrandr"; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m polybar --reload main &
+    # MONITOR=$m polybar --reload main &
     MONITOR=$m polybar --reload dots &
   done
 else
@@ -15,5 +15,5 @@ else
 fi
 
 # Launch the bar
-polybar eDP1 &
-polybar HDMI2 &
+polybar eDP &
+polybar HDMI &

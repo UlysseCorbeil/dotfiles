@@ -22,6 +22,18 @@ configuration {
   show-icons: true;
 }
 
+// * {
+//     fg0:    #ece0d1;      // main text (warm ivory)
+//     fg1:    #cfa895;      // light bronze
+//     fg2:    #b49b87;      // dusty beige
+//     fg3:    #a64838;      // rust red for highlight
+//     bg0:    #2b241f;      // background (rich brown)
+//     bg02:   #2b241fCC;    // translucent background
+//     bg1:    #3a2f29;      // inputbar bg
+//     bg2:    #4a3a34;      // message box, alt bg
+//     bg3:    #d08c60;      // selection highlight
+// }
+
 * {
     fg0:    #2E3440F2;
     fg1:    #3B4252;

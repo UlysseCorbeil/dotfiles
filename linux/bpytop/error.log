@@ -2,3 +2,27 @@
 12/01/23 (19:55:27) | INFO: Loglevel set to DEBUG
 12/01/23 (19:55:31) | INFO: Loglevel set to INFO
 12/01/23 (19:55:32) | INFO: Loglevel set to DEBUG
+03/02/23 (16:47:11) | ERROR: Exception when sending signal 9 to pid 1036
+03/02/23 (16:47:11) | ERROR: [Errno 1] Operation not permitted
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 5479, in process_keys
+    os.kill(pid, sig)
+PermissionError: [Errno 1] Operation not permitted
+03/02/23 (16:47:12) | ERROR: Exception when sending signal 9 to pid 1036
+03/02/23 (16:47:12) | ERROR: [Errno 1] Operation not permitted
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 5479, in process_keys
+    os.kill(pid, sig)
+PermissionError: [Errno 1] Operation not permitted
+03/02/23 (16:47:17) | ERROR: Exception when sending signal 9 to pid 1036
+03/02/23 (16:47:17) | ERROR: [Errno 1] Operation not permitted
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 5479, in process_keys
+    os.kill(pid, sig)
+PermissionError: [Errno 1] Operation not permitted
+03/02/23 (16:47:29) | ERROR: Exception when sending signal 15 to pid 1036
+03/02/23 (16:47:29) | ERROR: [Errno 1] Operation not permitted
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 5479, in process_keys
+    os.kill(pid, sig)
+PermissionError: [Errno 1] Operation not permitted
